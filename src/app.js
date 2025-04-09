@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-export const app=express();
+const app=express();
 import createUser from './routes/user.js'
 import login from './routes/login.js'
 import verify from '../middlewares/verifyMiddleware.js';
@@ -28,3 +28,4 @@ app.get('/',(err,req,res)=>{
 })
 
 
+export default app ;
