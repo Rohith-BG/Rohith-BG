@@ -1,5 +1,5 @@
-import { app } from './src/app.js';
-import { checkDBConnection } from './src/config/db_connection.js'
+import  app  from './src/app.js';
+import  checkDBConnection  from './src/config/db_connection.js'
 
 checkDBConnection();
 
