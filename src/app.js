@@ -14,18 +14,23 @@ app.use('/signUp',createUser);
 app.use('/login',login);
 app.use('/api/user',verify,password);
 
-app.get('/',verify,rollBased('admin'),async (req,res)=>{
-    try{
-        // console.log('hi');
-        const users = await User.find();
-        res.status(200).json({"All users":users})
-    }catch(err){
-        res.status(500).json({'message':res.message})
-    }
-})
-app.get('/',(err,req,res)=>{
-    return res.status(500).json({'error':err.stack})
-})
+// app.get('/',verify,rollBased('admin'),async (req,res)=>{
+//     try{
+//         // console.log('hi');
+//         const users = await User.find();
+//         res.status(200).json({"All users":users})
+//     }catch(err){
+//         res.status(500).json({'message':res.message})
+//     }
+// })
+
+// app.get('/',(err,req,res)=>{
+//     return res.status(500).json({'error':err.stack})
+// })
+app.get('/', (req, res) => {
+    res.send('Server is live!');
+});
+  
 
 
 export default app ;
