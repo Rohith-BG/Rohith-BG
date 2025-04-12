@@ -3,7 +3,7 @@ import cors from 'cors'
 const app=express();
 import createUser from './routes/user.js'
 import login from './routes/login.js'
-import verify from '../src/middlewares/verifyMiddleware.js'
+import verify from '../middlewares/verifyMiddleware.js'
 import User from './models/user.js'
 import healthRoute from './routes/healthRoute.js'
 // import rollBased from '../middlewares/rbac.js';
